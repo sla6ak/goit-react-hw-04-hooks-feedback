@@ -14,11 +14,11 @@ const App = () => {
   // счетчик кликов меняет стейт
   const onClickFitbak = tipeClick => {
     if (tipeClick === 'good') {
-      setGood(good + 1);
+      setGood(prevState => prevState + 1);
     } else if (tipeClick === 'neutral') {
-      setNeutral(neutral + 1);
+      setNeutral(prevState => prevState + 1);
     } else if (tipeClick === 'bad') {
-      setBad(bad + 1);
+      setBad(prevState => prevState + 1);
     }
   };
 
