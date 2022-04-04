@@ -1,15 +1,17 @@
-import s from './Statistiks.module.css';
 import propTypes from 'prop-types';
+import { ListFeedback, ResaultFeedback } from './Statistics.styled';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
-    <ul className={s.list}>
-      <li className={s.ok}>good: {good}</li>
-      <li className={s.neutral}>neutral: {neutral}</li>
-      <li className={s.bad}>bad: {bad}</li>
-      <li className={s.li}>total: {total}</li>
-      <li className={s.li}>positivePercentage: {positivePercentage} %</li>
-    </ul>
+    <ListFeedback>
+      <ResaultFeedback ok="ok">good: {good}</ResaultFeedback>
+      <ResaultFeedback>neutral: {neutral}</ResaultFeedback>
+      <ResaultFeedback ok="bad">bad: {bad}</ResaultFeedback>
+      <ResaultFeedback>total: {total}</ResaultFeedback>
+      <ResaultFeedback>
+        positivePercentage: {positivePercentage} %
+      </ResaultFeedback>
+    </ListFeedback>
   );
 };
 Statistics.propTypes = {

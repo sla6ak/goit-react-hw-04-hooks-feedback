@@ -1,6 +1,6 @@
-import s from './Notification.module.css';
+import { Signature } from './Notification.styled';
 
 const Notification = () => {
-  return <div className={s.no}>No feedbeck given</div>;
+  return <Signature>No feedbeck given</Signature>;
 };
 export default Notification;

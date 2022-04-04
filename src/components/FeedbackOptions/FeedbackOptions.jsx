@@ -1,25 +1,25 @@
-import s from './FeedbackOptions.module.css';
 import React from 'react';
 import propTypes from 'prop-types';
 import { string } from 'prop-types';
+import { СhoiceFidback, ButtonFeedback } from './FeedbackOptions.styled';
 
 const FeedbackOptions = props => {
   return (
-    <ul className={s.box}>
+    <СhoiceFidback>
       {props.options.map(option => {
         return (
           <li key={option}>
-            <button
-              className={s.bt}
+            <ButtonFeedback
+              ok={option}
               type="button"
               onClick={() => props.onLeaveFeedback(option)}
             >
               {option}
-            </button>
+            </ButtonFeedback>
           </li>
         );
       })}
-    </ul>
+    </СhoiceFidback>
   );
 };
 FeedbackOptions.propTypes = {
